@@ -8,12 +8,14 @@ Requires 64-bit Windows and OBS 32. Built and tested with OBS 32.1.2.
 
 1. Close OBS.
 2. Download `reactive-png-windows-x64.zip` from the [Releases](../../releases) page.
-3. Extract it into `C:\ProgramData\obs-studio\plugins`, creating the `plugins` folder if it doesn't exist. Windows may ask for administrator permission.
-4. Check that the DLL ended up here:
+3. Extract the zip, then move the `reactive-png` folder inside it into `C:\ProgramData\obs-studio\plugins`. Create the `plugins` folder if it doesn't exist. Windows may ask for administrator permission.
+4. Check the path. `reactive-png` must sit directly inside `plugins`, so the path goes `plugins\reactive-png\bin`:
 
    ```text
    C:\ProgramData\obs-studio\plugins\reactive-png\bin\64bit\reactive-png.dll
    ```
+
+   Windows' **Extract All** adds an extra `reactive-png-windows-x64` folder. If that folder is in the path, OBS won't load the plugin and won't show an error.
 
 5. Start OBS. **Reactive PNG** now appears in the list of sources.
 
